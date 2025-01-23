@@ -1,5 +1,5 @@
 # university-management-django# Django Student-Course Management System
-A web application to manage students and courses for the School of Computer Science. Features include viewing student and course lists, and detailed course information with enrolled students.
+A web application to manage students and courses. Features include viewing student and course lists, and detailed course information with enrolled students.
 
 ## Features
 - Manage courses: Name, coordinator, size, and enrolled students.
