@@ -1,0 +1,22 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <div class="content-root">
+        <div class="content-container">
+            <h2>Schools</h2>
+            <section class="large-list-container">
+                {% for school in school_list %}
+                    <a href="{% url 'schools.show' id=school.id %}" class="list-item-card">
+                        <section class="list-item-card-left">
+                            <p class="list-item-card-title">{{ school.name }}</p>
+                            <p class="list-item-card-subtitle"><b>Head:</b> {{ school.headName }}</p>
+                        </section>
+                        <section>
+                            <p class="list-item-card-counter">{{ forloop.counter }}</p>
+                        </section>
+                    </a>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+{% endblock %}

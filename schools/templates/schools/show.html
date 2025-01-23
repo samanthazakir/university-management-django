@@ -1,0 +1,31 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <div class="content-root">
+        <div class="content-container">
+            <h4>School Details</h4>
+            <section class="details-card">
+                <h2 class="details-card-title">{{ school.name }}</h2>
+                <p class="details-card-subtitle"><b>Head:</b> {{ school.headName }}</p>
+                <p class="details-card-subtitle"><b>Location:</b> {{ school.location }}</p>
+            </section>
+
+            <section class="h-16"></section>
+
+            <h4>Courses under this school</h4>
+            <section class="large-list-container">
+                {% for course in course_list %}
+                    <a href="{% url 'courses.show' id=course.id %}" class="list-item-card">
+                        <section class="list-item-card-left">
+                            <p class="list-item-card-title">{{ course.name }}</p>
+                            <p class="list-item-card-subtitle"><b>Total Credit:</b> {{ course.total_credits|floatformat:2 }}</p>
+                        </section>
+                        <section>
+                            <p class="list-item-card-counter">{{ forloop.counter }}</p>
+                        </section>
+                    </a>
+                {% endfor %}
+            </section>
+        </div>
+    </div>
+{% endblock %}

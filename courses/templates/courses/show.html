@@ -1,0 +1,14 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <div class="content-root">
+        <div class="content-container">
+            <h4>Course Details</h4>
+            <section class="details-card">
+                <h2 class="details-card-title">{{ course.name }}</h2>
+                <p class="details-card-subtitle"><b>Coordinator:</b> {{ course.coordinator }}</p>
+                <p class="details-card-subtitle"><b>Total Credits:</b> {{ course.total_credits|floatformat:2 }}</p>
+            </section>
+        </div>
+    </div>
+{% endblock %}

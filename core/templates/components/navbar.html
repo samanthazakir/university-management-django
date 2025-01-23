@@ -1,0 +1,18 @@
+<nav class="navbar">
+    <a href="{% url 'home.index' %}" class="navbar-logo">
+        <section class="navbar-logo-line">
+            <span class="navbar-logo-ch-lg">U</span><span class="navbar-logo-ch-sm">niversity</span>
+        </section>
+        <section class="navbar-logo-line">
+            <span class="navbar-logo-ch-lg">M</span><span class="navbar-logo-ch-sm">anagement</span>
+        </section>
+        <section class="navbar-logo-line">
+            <span class="navbar-logo-ch-lg">S</span><span class="navbar-logo-ch-sm">ystem</span>
+        </section>
+    </a>
+    <ul class="navbar-menu">
+        <a href="{% url 'schools.index' %}" class="navbar-menu-item">Schools</a>
+        <a href="{% url 'courses.index' %}" class="navbar-menu-item">Courses</a>
+        <a href="{% url 'about.index' %}" class="navbar-menu-item">About</a>
+    </ul>
+</nav>
